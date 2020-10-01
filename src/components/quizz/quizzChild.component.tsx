@@ -40,38 +40,30 @@ const QuizzChild = ({ choices }: QuizzTitleProps) => {
           <>
           <button
             onClick={() => handleClick(choices[0].is_correct)}
-            className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4`}
+              className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4 ${correct === "true" && 'correct'} ${correct === "false" && 'wrong'}`}
           >
-            <p className={`${correct === "true" && 'correct'} ${correct === "false" && 'wrong'}`}>
               {choices[0].text}
-            </p>
             </button>
             
           <button
               onClick={() => handleClick1(choices[1].is_correct)}
-            className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4`}
+              className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4 ${correct1 === "true" && 'correct'} ${correct1 === "false" && 'wrong'}`}
           >
-              <p className={`${correct1 === "true" && 'correct'} ${correct1 === "false" && 'wrong'}`}>
               {choices[1].text}
-            </p>
             </button>
             
             <button
               onClick={() => handleClick2(choices[2].is_correct)}
-              className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4`}
+              className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4 ${correct2 === "true" && 'correct'} ${correct2 === "false" && 'wrong'}`}
             >
-              <p className={`${correct2 === "true" && 'correct'} ${correct2 === "false" && 'wrong'}`}>
-                {choices[2].text}
-              </p>
+              {choices[2].text}
             </button>
 
             <button
               onClick={() => handleClick3(choices[3].is_correct)}
-              className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4`}
+              className={`bg-white w-5/12 p-4 text-purple-800 font-semibold rounded shadow mb-4 ${correct3 === "true" && 'correct'} ${correct3 === "false" && 'wrong'}`}
             >
-              <p className={`${correct3 === "true" && 'correct'} ${correct3 === "false" && 'wrong'}`}>
-                {choices[3].text}
-              </p>
+              {choices[3].text}
             </button>
           </>
           
